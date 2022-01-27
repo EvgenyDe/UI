@@ -510,7 +510,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 87380495}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2046500561}
+        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_MethodName: onLevelClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &87380495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,7 +1310,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 192577666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2046500561}
+        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_MethodName: onLevelClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &192577666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3942,7 +3966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 808483825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2046500561}
+        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_MethodName: onLevelClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &808483825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7289,7 +7325,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1571605177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2046500561}
+        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_MethodName: onLevelClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1571605177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7865,7 +7913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1742861359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2046500561}
+        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_MethodName: onLevelClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1742861359
 MonoBehaviour:
   m_ObjectHideFlags: 0
