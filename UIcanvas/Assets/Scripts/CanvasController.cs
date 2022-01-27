@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,14 @@ public class CanvasController : MonoBehaviour
     [SerializeField] private GameObject panelRoot;
     [SerializeField] private GameObject[] emptyStars;
     [SerializeField] private GameObject[] fullStars;
-   
     
+    [SerializeField] private GameObject[] levelNumber;
 
-    [SerializeField] private Transform[] points;
+    private int lvlN = 0;
 
-    private Transform[] shootingStars;
-    private float timer;
+    private int amountStars;
+    //private int levelNumber=1;
+    public event Action<StarCount> LevelComplete;
 
 // Start is called before the first frame update
     void Start()
@@ -23,16 +25,13 @@ public class CanvasController : MonoBehaviour
         {
             fullStar.SetActive(false);
         }
-        panelRoot.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            panelRoot.SetActive(true);
-        }
+        
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -49,85 +48,43 @@ public class CanvasController : MonoBehaviour
     }
 
 
-    private void ActivateStars(int amount)
-
+    public void onLevelClick(int N)
     {
-
-        for (var i = 0; i < emptyStars.Length; i++)
-
+        lvlN = N;
+        panelRoot.SetActive(true);
+    }
+    public void onClickOK()
+    {
+        StartCoroutine(nameof(CoroutineScaler));
+        //lvlN+=1;
+        for (int i = 0; i < 3; i++)
         {
-
-            fullStars[i].SetActive(i < amount);
-
+            levelNumber[lvlN].transform.GetChild(1).transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(false);
         }
-
-  
-
-        if (amount == 0)
-
-        {
-
-            return;
-
-        }
-
-
-
-        shootingStars = new Transform[amount];
-
-
-
-        for (var i = 0; i < amount; i++)
-
-        {
-
-            shootingStars[i] = fullStars[i].transform;
-
-            shootingStars[i].position = points[i].position;
-
-        }
-
         
-        timer = 0f;
+        
+    }
 
-        if (shootingStars == null || timer > 1f)
-
-            return;
-
-
-
-        for (var i = 0; i < shootingStars.Length; i++)
-
+    IEnumerator CoroutineScaler()
+    {
+        while (panelRoot.transform.localScale!=Vector3.zero)
         {
-
-            shootingStars[i].position = Vector3.Lerp(points[i].position, emptyStars[i].transform.position, timer);
-
+            panelRoot.transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+            yield return null;
         }
+        StopAllCoroutines();
+    }
 
-
-
-        timer += Time.deltaTime;
-
-
-
-        if (timer < 1f)
-
-            return;
-
-
-
-
-        amount = shootingStars.Length;
-
+    private void ActivateStars(int amount)
+    {
         for (var i = 0; i < emptyStars.Length; i++)
 
         {
-
-            emptyStars[i].SetActive(i >= amount);
-
+            fullStars[i].SetActive(i < amount);
         }
 
-
-        shootingStars = null;
+        amountStars = amount;
     }
 }
+
+
