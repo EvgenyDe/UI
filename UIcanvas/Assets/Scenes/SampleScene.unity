@@ -8140,7 +8140,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2046500561}
         m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
-        m_MethodName: onClickScaler
+        m_MethodName: onClickOK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8596,13 +8596,13 @@ MonoBehaviour:
   - {fileID: 290560757}
   levelNumber:
   - {fileID: 1129626890}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 221018125}
+  - {fileID: 1434196262}
+  - {fileID: 87380492}
+  - {fileID: 192577663}
+  - {fileID: 1742861356}
+  - {fileID: 808483822}
+  - {fileID: 1571605174}
 --- !u!4 &2046500562
 Transform:
   m_ObjectHideFlags: 0
