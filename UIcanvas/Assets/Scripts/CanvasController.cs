@@ -60,7 +60,7 @@ public class CanvasController : MonoBehaviour
         //lvlN+=1;
         for (int i = 0; i < amountStars; i++)
         {
-            levelNumber[lvlN].transform.GetChild(1).transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(true);
+            levelNumber[lvlN-1].transform.GetChild(1).transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(true);
         }
         
         
