@@ -52,14 +52,15 @@ public class CanvasController : MonoBehaviour
     {
         lvlN = N;
         panelRoot.SetActive(true);
+        panelRoot.transform.localScale = Vector3.one;
     }
     public void onClickOK()
     {
         StartCoroutine(nameof(CoroutineScaler));
         //lvlN+=1;
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < amountStars; i++)
         {
-            levelNumber[lvlN].transform.GetChild(1).transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(false);
+            levelNumber[lvlN].transform.GetChild(1).transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(true);
         }
         
         
