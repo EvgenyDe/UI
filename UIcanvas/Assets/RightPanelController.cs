@@ -45,16 +45,17 @@ public class RightPanelController : MonoBehaviour
         
        // Debug.Log(N);   
         float locScale = 0.3f;
-        
-        glo
+
+        globalN = N;
+        keyCode = 0;
         for (int i = 0; i < transform.childCount; i++)
         {
             fieldButtons[i].transform.localScale = Vector3.one;
-            fieldButtons[i].transform.GetChild(0).gameObject.SetActive(false);
+            fieldButtons[i].transform.GetChild(3).gameObject.SetActive(false);
         }
         fieldButtons[N].transform.localScale += new Vector3(locScale, locScale, locScale);
         
-        fieldButtons[N].transform.GetChild(0).gameObject.SetActive(true);
+        fieldButtons[N].transform.GetChild(3).gameObject.SetActive(true);
 
         for (int i = 0; i < keyCode; i++)
         {
@@ -78,15 +79,16 @@ public class RightPanelController : MonoBehaviour
     {
          
         if (Input.GetKeyDown(KeyCode.Alpha1)) {keyCode = 1; starCount(); }
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {keyCode = 2; starCount(); }
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {keyCode = 3; starCount(); }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {keyCode = 2; starCount(); }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {keyCode = 3; starCount(); }
     }
 
     void starCount()
     {
+        Debug.Log(keyCode);
         for (int i = 0; i < keyCode; i++)
         {
-            fieldButtons[N].transform.GetChild(i).gameObject.SetActive(true);
+            fieldButtons[globalN].transform.GetChild(i).gameObject.SetActive(true);
         }
     }
 }
