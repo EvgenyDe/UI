@@ -1212,6 +1212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611761699}
   - component: {fileID: 611761700}
+  - component: {fileID: 611761701}
   m_Layer: 5
   m_Name: Slider1
   m_TagString: Untagged
@@ -1293,6 +1294,14 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!222 &611761701
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611761698}
+  m_CullTransparentMesh: 1
 --- !u!1 &646418838
 GameObject:
   m_ObjectHideFlags: 0
