@@ -9,8 +9,9 @@ using UnityEngine.UI;
 public class RightPanelController : MonoBehaviour
 {
     [SerializeField]public GameObject[] fieldButtons;
-
-    public GameObject redSelect;
+    public Text name_lvl;
+    
+    //public GameObject redSelect;
     
     private int globalN = 0;
     private int keyCode=0;
@@ -42,7 +43,7 @@ public class RightPanelController : MonoBehaviour
     
     public void OnFieldClicked(int N)
     {
-        
+        name_lvl.text = "Level "+ N;
        // Debug.Log(N);   
         float locScale = 0.3f;
 
